@@ -1,0 +1,29 @@
+{
+    "[python]": {
+        // ruff linter - we probably don't want automatic fixes
+        "editor.codeActionsOnSave": {            
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",        
+        "editor.formatOnSave": true,
+    },
+    // enable tooltips for locally imported modules
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    // this stuff doesn't seem to work
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}",
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+}
