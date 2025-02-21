@@ -75,3 +75,7 @@ def read_fasta_files(files, fused_lambda=None):
     for f in files:
         sequences.extend(read_fasta(f, fused_lambda))
     return sequences
+
+
+def hello():
+    print("Hello from fbme biolib")
